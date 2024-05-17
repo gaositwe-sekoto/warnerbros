@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros</title>
+    <link rel="stylesheet" href="styless.css"> 
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Warner Bro. Co</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="tv_shows.html">TV Shows</a></li>
+                    <li><a href="games_apps.html">Games & Apps</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="tv-shows">
+        <div class="container">
+            <h2>Popular TV Shows</h2>
+            <div class="slideshow-container">
+              
+                <div class="slideshow-slide fade">
+                    <img src="pictures/Full house.jpg" alt="TV Show 1">
+                    <div class="tv-show-info">
+                        <h3>Full House</h3>
+                        <p>Premise. After the death of his wife Pam, sports anchor Danny Tanner recruits his brother-in-law (Pam's younger brother) Jesse, a rock musician, and Joey, his best friend since childhood who works as a stand-up comedian, to help raise his three young daughters in San Francisco—D.J., Stephanie, and Michelle.</p>
+                    </div>
+                </div>
+                <div class="slideshow-slide fade">
+                    <img src="pictures/One Tree Hill (2003).jpg" alt="TV Show 2">
+                    <div class="tv-show-info">
+                        <h3>One Tree Hill</h3>
+                        <p>Half-brothers Lucas and Nathan Scott trade between kinship and rivalry both on the basketball court and in the hearts of their friends in the small, but not so quiet town of Tree Hill, North Carolina. The lives of brothers Nathan and Lucas Scott as they travel through high school and college.</p>
+                    </div>
+                </div>
+                <div class="slideshow-slide fade">
+                    <img src="pictures/that 70s show poster !!!.jpg" alt="TV Show 3">
+                    <div class="tv-show-info">
+                        <h3>That '7Os Show</h3>
+                        <p>the series is a retro-hip situation comedy about an eclectic group of friends on the verge of adulthood. They live in the suburbs of Wisconsin, where they yearn for independence amid the growing pains of becoming adults.</p>
+                    </div>
+                </div>
+                <div class="slideshow-slide fade">
+                    <img src="pictures/download (2).jpg" alt="TV Show 2">
+                    <div class="tv-show-info">
+                        <h3>Everybody Loves Raymond</h3>
+                        <p>Ray Barone is a successful sports writer and family man who deals with a brother and parents -- who happen to live across the street. Mom Marie loves to meddle in his life, while older brother Robert sometimes resents his success, and Dad Frank just makes comments and raids the fridge.</p>
+                    </div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        <script>let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slideshow-slide");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                slides[slideIndex - 1].style.display = "block";  
+                setTimeout(showSlides, 5000); 
+            }
+            
+            function plusSlides(n) {
+                slideIndex += n;
+                let slides = document.getElementsByClassName("slideshow-slide");
+                if (slideIndex > slides.length) {slideIndex = 1}
+                if (slideIndex < 1) {slideIndex = slides.length}
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slides[slideIndex - 1].style.display = "block";  
+            }
+            </script>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Warner Bro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
